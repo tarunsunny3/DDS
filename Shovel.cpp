@@ -23,14 +23,14 @@ public:
       outfile << latency << "\n";  // Write latency to file
       outfile.close();
 
-      if (tonnage.sequence != last_sequence + 1) {  // Check sequence number
+      if (tonnage.seqNumber != last_sequence + 1) {  // Check sequence number
         ACE_ERROR((LM_ERROR,
                    ACE_TEXT("ERROR: %N:%l: on_data_available() -")
                    ACE_TEXT(" out-of-sequence message received: expected %d but got %d\n"),
-                   last_sequence + 1, tonnage.sequence));
+                   last_sequence + 1, tonnage.seqNumber));
       }
 
-      last_sequence = tonnage.sequence;
+      last_sequence = tonnage.seqNumber;
     } else {
       ACE_ERROR((LM_ERROR,
                  ACE_TEXT("ERROR: %N:%l: on_data_available() -")

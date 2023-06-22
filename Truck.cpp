@@ -60,7 +60,7 @@ int ACE_TMAIN(int argc, ACE_TCHAR* argv[]) {
       Mining::Tonnage tonnage;
       tonnage.value = distribution(generator);  // Random tonnage value
       tonnage.timeStamp = ACE_OS::gettimeofday().msec();  // Current time in microseconds
-      tonnage.sequence = i;  // Set sequence number
+      tonnage.seqNumber = i;  // Set sequence number
 
       DDS::ReturnCode_t error = writer->write(tonnage, DDS::HANDLE_NIL);
       if (error != DDS::RETCODE_OK) {

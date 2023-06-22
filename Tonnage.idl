@@ -2,6 +2,6 @@ module Mining {
   struct Tonnage {
     double value;
     long long timeStamp;  // microseconds since epoch
-    long sequence;  // sequence number
+    long seqNumber;  // sequence number
   };
 };
