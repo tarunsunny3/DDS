@@ -62,7 +62,7 @@ int ACE_TMAIN(int argc, ACE_TCHAR* argv[]) {
     std::default_random_engine generator;
     std::uniform_real_distribution<double> distribution(0.0, 100.0);
 
-    for (int i = 0; i < 6; ++i) {  // run for 1 minute (6 intervals of 10 seconds)
+    for (int i = 0; i < 1080; ++i) {  // run for 3 hours for every 10 seconds)
       Mining::Tonnage tonnage;
       tonnage.value = distribution(generator);  // Random tonnage value
       tonnage.timeStamp = ACE_OS::gettimeofday().msec();  // Current time in microseconds
