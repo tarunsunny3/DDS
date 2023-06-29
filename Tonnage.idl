@@ -1,4 +1,5 @@
 module Mining {
+  @topic
   struct Tonnage {
     double value;
     long long timeStamp;  // microseconds since epoch
